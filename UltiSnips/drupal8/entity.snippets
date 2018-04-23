@@ -33,3 +33,18 @@ function `!v expand('%:t:r:r')`_${1}_update(EntityInterface $entity) {
   ${2}
 }
 endsnippet
+
+snippet service_ems "Service Entity Manager Storage"
+\Drupal::service('entity.manager')
+  ->getStorage(${1});
+endsnippet
+
+snippet continer_ems "Container Entity Manager Storage"
+$this->container('entity.manager')
+  ->getStorage(${1});
+endsnippet
+
+snippet this_ems "Entity Manager Storage"
+$this->entityManager
+  ->getStorage(${1});
+endsnippet
