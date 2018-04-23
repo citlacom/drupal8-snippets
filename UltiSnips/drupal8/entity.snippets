@@ -48,3 +48,10 @@ snippet this_ems "Entity Manager Storage"
 $this->entityManager
   ->getStorage(${1});
 endsnippet
+
+snippet this_emsq "Entity Manager Storage Query"
+$this->entityManager
+  ->getStorage(${1})
+	->getQuery();
+endsnippet
+
