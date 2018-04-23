@@ -35,22 +35,22 @@ function `!v expand('%:t:r:r')`_${1}_update(EntityInterface $entity) {
 endsnippet
 
 snippet service_ems "Service Entity Manager Storage"
-\Drupal::service('entity.manager')
+$storage = \Drupal::service('entity.manager')
   ->getStorage(${1});
 endsnippet
 
 snippet continer_ems "Container Entity Manager Storage"
-$this->container('entity.manager')
+$storage = $this->container('entity.manager')
   ->getStorage(${1});
 endsnippet
 
 snippet this_ems "Entity Manager Storage"
-$this->entityManager
+$storage = $this->entityManager
   ->getStorage(${1});
 endsnippet
 
 snippet this_emsq "Entity Manager Storage Query"
-$this->entityManager
+$query = $this->entityManager
   ->getStorage(${1})
 	->getQuery();
 endsnippet
