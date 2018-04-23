@@ -55,3 +55,9 @@ $query = $this->entityManager
 	->getQuery();
 endsnippet
 
+snippet this_emsl "Entity Manager Storage Load"
+$${1} = $this->entityManager
+  ->getStorage(${2})
+	->load(${3})
+endsnippet
+
