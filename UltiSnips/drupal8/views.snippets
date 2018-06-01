@@ -28,6 +28,7 @@ function `!v expand('%:t:r:r')`_views_post_build(ViewExecutable $view) {
   if ($view->id() == 'my_view' && $view->exposed_raw_input['type'] != 'All') {
     if (isset($view->field['type'])) {
       $view->field['type']->options['exclude'] = TRUE;
+			${1}
     }
   }
 }
