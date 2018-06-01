@@ -1,0 +1,34 @@
+snippet hook_views_pre_view "Views pre view hook."
+/**
+ * Implements hook_views_pre_view().
+ */
+function `!v expand('%:t:r:r')`_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  if ($view->id() == 'my_special_view') {
+    ${1}
+  }
+}
+endsnippet
+
+snippet hook_views_pre_build "Views pre build hook."
+/**
+ * Implements hook_views_pre_build().
+ */
+function `!v expand('%:t:r:r')`_views_pre_build(ViewExecutable $view) {
+  if ($view->id() == 'my_special_view') {
+    ${1}
+  }
+}
+endsnippet
+
+snippet hook_views_post_build "Views post build hook."
+/**
+ * Implements hook_views_post_build().
+ */
+function `!v expand('%:t:r:r')`_views_post_build(ViewExecutable $view) {
+  if ($view->id() == 'my_view' && $view->exposed_raw_input['type'] != 'All') {
+    if (isset($view->field['type'])) {
+      $view->field['type']->options['exclude'] = TRUE;
+    }
+  }
+}
+endsnippet
