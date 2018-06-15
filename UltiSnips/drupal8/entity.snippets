@@ -43,6 +43,18 @@ function `!v expand('%:t:r:r')`_${1}_presave(EntityInterface $entity) {
 }
 endsnippet
 
+snippet hook_entity_type_alter "hook_entity_type_alter"
+/**
+ * Implements hook_entity_type_alter().
+ */
+function `!v expand('%:t:r:r')`_entity_type_alter(array &$entity_types) {
+  // @var $entity_types \Drupal\Core\Entity\EntityTypeInterface[]
+  $entity_type = $entity_types['${2}'];
+	// Alter the entity type code here.
+	$entity_type${3}
+}
+endsnippet
+
 snippet service_ems "Service Entity Manager Storage"
 $storage = \Drupal::service('entity.manager')
   ->getStorage(${1});
