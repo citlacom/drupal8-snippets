@@ -34,6 +34,12 @@ function `!v expand('%:t:r:r')`_${1}_update(EntityInterface $entity) {
 }
 endsnippet
 
+snippet hook_ENTITY_TYPE_presave "hook_ENTITY_TYPE_presave"
+function `!v expand('%:t:r:r')`_${1}_presave(EntityInterface $entity) {
+  ${2}
+}
+endsnippet
+
 snippet service_ems "Service Entity Manager Storage"
 $storage = \Drupal::service('entity.manager')
   ->getStorage(${1});
