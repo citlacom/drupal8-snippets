@@ -85,12 +85,3 @@ endsnippet
 snippet eted "Entity Type Entities Definitions"
 $entity_types = \Drupal::entityTypeManager()->getDefinitions();
 endsnippet
-
-snippet hook_entity_type_alter "Entity Type Alter"
-/**
- * Implements hook_entity_type_alter().
- */
-function `!v expand('%:t:r:r')`_entity_type_alter(array &$entity_types) {
-	${1}
-}
-endsnippet
