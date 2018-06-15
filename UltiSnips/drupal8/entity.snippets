@@ -35,6 +35,9 @@ function `!v expand('%:t:r:r')`_${1}_update(EntityInterface $entity) {
 endsnippet
 
 snippet hook_ENTITY_TYPE_presave "hook_ENTITY_TYPE_presave"
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
 function `!v expand('%:t:r:r')`_${1}_presave(EntityInterface $entity) {
   ${2}
 }
