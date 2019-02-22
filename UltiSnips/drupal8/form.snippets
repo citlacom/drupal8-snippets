@@ -1,0 +1,44 @@
+snippet hook_ajax_render_alter "Ajax Render Alter"
+/**
+ * Implements hook_ajax_render_alter().
+ */
+function `!v expand('%:t:r:r')`_ajax_render_alter(array &$data) {
+	${1}
+}
+endsnippet
+
+snippet hook_form_alter "Hook Form Alter"
+/**
+ * Implements hook_form_alter().
+ */
+function `!v expand('%:t:r:r')`_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+	${1}
+}
+endsnippet
+
+snippet hook_form_FORM_ID_alter "Hook Form ID Alter"
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function `!v expand('%:t:r:r')`_form_${1:FORM_ID}_alter(&$form, FormStateInterface $form_state, $form_id) {
+	${2}
+}
+endsnippet
+
+snippet hook_form_BASE_FORM_ID_alter "Hook Form Base Form ID Alter"
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function `!v expand('%:t:r:r')`_form_BASE_FORM_ID_alter(&$form, FormStateInterface $form_state, $form_id) {
+	${1}
+}
+endsnippet
+
+snippet hook_batch_alter "Hook Batch Alter"
+/**
+ * Implements hook_batch_alter().
+ */
+function `!v expand('%:t:r:r')`_batch_alter(&$batch) {
+	${1}
+}
+endsnippet
